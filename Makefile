@@ -4,7 +4,7 @@ CC := gcc
 QEMU := qemu-system-i386
 
 CCFLAGS := +-m32 +-nostdinc +-ffreestanding +-fno-stack-protector
-OOCFLAGS := -c -v -g --gc=off --nomain -Iinclude $(CCFLAGS)
+OOCFLAGS := -c -v -pg --gc=off --nomain -Iinclude $(CCFLAGS)
 
 LDFLAGS := -melf_i386 -nostdlib -g
 ASFLAGS := -felf32 -g
